@@ -1,0 +1,44 @@
+html {
+	background-image: url("../images/background.png");
+	background-size: 100%;
+}
+
+body {
+	text-align: center;
+	line-height: 2;
+	font-style: 
+	color: white;
+}
+
+button {
+	border: none;
+	background: white;
+	border-radius: 8px;
+	font-size: 15px;
+}
+
+#start {
+	background: blue;
+	border: 2px solid red;
+}
+
+#startOver {
+	background: blue;
+	border: 2px solid red;
+}
+
+.options {
+	display: block;
+	margin: auto;
+	
+}
+
+img {
+	width: 400px;
+}
+
+.options:hover {
+	background: blue;
+	border: 2px solid red;
+	
+}
