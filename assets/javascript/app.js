@@ -1,26 +1,67 @@
 $(document).ready(function() {
 
 	var questions = [
-			{	
-					question: "Which is Ash's Starter Pokémon?",
-					answers: ["Squirtle", "Bulbasaur", "Charmander", "Pikachu"],
-					correct: "Pikachu",
-					image: "assets/images/pikachu.gif"
-			},
-			{	
-					question: "Where is Ash's Hometown?",
-					answers: ["Pallet Town", "Cerulean City", "Pewter City", "Lavender Town"],
-					correct: "Pallet Town",
-					image: "assets/images/pallet.jpg"
+		{	
+			question: "Which is Ash's Starter Pokémon?",
+			answers: ["Squirtle", "Bulbasaur", "Charmander", "Pikachu"],
+			correct: "Pikachu",
+			image: "assets/images/pikachu.gif"
+		},
+		{	
+			question: "Where is Ash's Hometown?",
+			answers: ["Pallet Town", "Cerulean City", "Pewter City", "Lavender Town"],
+			correct: "Pallet Town",
+			image: "assets/images/pallet.jpg"
 
-			},
-			{	
-					question: "Which is the first gym badge that Ash earns?",
-					answers: ["Cascade Badge", "Boulder Badge", "Thunder Badge", "Soul Badge"],
-					correct: "Boulder Badge",
-					image: "assets/images/badges.gif"
-			}
-	
+		},
+		{
+			question: "Who is Ash's rival from his hometown?",
+			answers: ["Team Rocket", "Gary Oak", "Giovanni", "Professor Oak"],
+			correct: "Gary Oak",
+			image: "assets/images/gary.gif"
+		},
+		{	
+			question: "Which is the first gym badge that Ash earns?",
+			answers: ["Cascade Badge", "Boulder Badge", "Thunder Badge", "Soul Badge"],
+			correct: "Boulder Badge",
+			image: "assets/images/boulder.gif"
+		},
+		{
+			question: "To protect the world from _________________.",
+			answers: ["gravitation", "trouble", "evil", "devastation"],
+			correct: "devastation",
+			image: "assets/images/rocket.gif"	
+		},
+		{
+			question: "In which direction does poliwag's swirl spiral?",
+			answers: ["Clockwise", "Counterclockwise", "Poliwag doesn't have a swirl"],
+			correct: "Clockwise",
+			image: "assets/images/poliwag.gif"	
+		},
+		{
+			question: "Who is Team Rocket's boss?",
+			answers: ["Professor Oak", "Sabrina", "Gary Oak", "Giovanni"],
+			correct: "Giovanni",
+			image: "assets/images/giovanni.jpeg"
+		},
+		{
+			question: "Misty is an expert on whay type of Pokémon?",
+			answers: ["Fire", "Grass", "Water", "Rock"],
+			correct: "Water",
+			image: "assets/images/misty.gif"
+		},
+		{
+			question: "Brock is an expert on whay type of Pokémon?",
+			answers: ["Fire", "Grass", "Water", "Rock"],
+			correct: "Rock",
+			image: "assets/images/brock.gif"
+		},
+		{
+			question: "In the original series, how did Ash get his hat?",
+			answers: ["He found it", "He stole it", "He won it in a contest", "It was a gift"],
+			correct: "He won it in a contest",
+			image: "assets/images/ash.gif"
+		}
 	];
 
 	var timeRemaining = 15;
@@ -70,6 +111,7 @@ $(document).ready(function() {
         currentQuestion++;
         if (currentQuestion === questions.length) {
 			clearInterval(timer);
+			$("#time").empty();
 			$("#rightWrong").html("All done, here is how you did!");
 			var newDiv = $("<div>");
 			var corr = "Correct Answers: " + correct + "<br>";
@@ -88,7 +130,6 @@ $(document).ready(function() {
 	        $("#rightWrong").empty();
 	        $("#img").empty();
     	};
-
 	};
 
 	function startOver() {
@@ -102,7 +143,6 @@ $(document).ready(function() {
 		unanswered = 0;
 		$(this).hide();
 		start();
-
 	};
 
 	$("#start").click(start);
@@ -130,6 +170,4 @@ $(document).ready(function() {
 			setTimeout(start, 5000);
 		} ;
 	});
-
-
 });
